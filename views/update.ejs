@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update AirBnB Listing</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Update AirBnB Listing</h1>
+  <form action="/api/AirBnBs/<%= airbnb._id || '' %>" method="post">
+    <% if (airbnb._id) { %>
+      <input type="hidden" name="_id" value="<%= airbnb._id %>">
+    <% } %>
+    <div>
+        <label for="_id">Id:</label>
+        <input type="text" id="_id" name="_id" value="<%= airbnb._id %>" required>
+      </div>
+    <div>
+      <label for="listing_url">Listing URL:</label>
+      <input type="url" id="listing_url" name="listing_url" value="<%= airbnb.listing_url %>" required>
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required><%= airbnb.description %></textarea>
+    </div>
+    <div>
+      <label for="neighborhood_overview">Neighborhood Overview:</label>
+      <textarea id="neighborhood_overview" name="neighborhood_overview"><%= airbnb.neighborhood_overview %></textarea>
+    </div>
+    <div>
+      <label for="cancellation_policy">Cancellation Policy:</label>
+      <input type="text" id="cancellation_policy" name="cancellation_policy" value="<%= airbnb.cancellation_policy %>" required>
+    </div>
+    <div>
+      <label for="property_type">Property Type:</label>
+      <input type="text" id="property_type" name="property_type" value="<%= airbnb.property_type %>" required>
+    </div>
+    <div>
+      <label for="room_type">Room Type:</label>
+      <input type="text" id="room_type" name="room_type" value="<%= airbnb.room_type %>" required>
+    </div>
+    <div>
+      <label for="accommodates">Accommodates:</label>
+      <input type="number" id="accommodates" name="accommodates" value="<%= airbnb.accommodates %>" required>
+    </div>
+    <div>
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" value="<%= airbnb.price %>" required>
+    </div>
+    <div>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</body>
+</html>

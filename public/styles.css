@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Soft grey background */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container for the page */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Header Styles */
+header {
+    background-color: #FF5A5F;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+header .header-logo h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Search Form Container */
+.form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Search Form Styles */
+.search-form {
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 25px;  /* Rounded borders for input fields */
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    border-color: #FF5A5F;  /* Red border on focus */
+}
+
+.search-btn {
+    background-color: #FF5A5F;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px;  /* Rounded button */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.search-btn:hover {
+    background-color: #FF385C;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Search Results Styles */
+.results-container {
+    margin-top: 30px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #FF5A5F;
+    color: white;
+    font-size: 16px;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td a {
+    color: #FF5A5F;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+div {
+    text-align: center;
+    margin-top: 30px;
+}
+
+div p {
+    font-size: 16px;
+    color: #555;
+}
+
+div a {
+    color: #FF5A5F;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #f7f7f7;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+div a:hover {
+    background-color: #FF5A5F;
+    color: white;
+}
+
+/* Mobile Responsiveness for Search Results */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 14px;
+    }
+
+    div p {
+        font-size: 14px;
+    }
+
+    div a {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Responsiveness for Search Form */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+}

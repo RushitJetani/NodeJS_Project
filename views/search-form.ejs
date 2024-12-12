@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search AirBnBs</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo">
+                <h1>Airbnb</h1>
+            </div>
+        </header>
+
+        <div class="form-container">
+            <h2>Find your next getaway</h2>
+
+
+            <!-- Search Form -->
+            <form id="searchForm" action="/search" method="POST" class="search-form">
+                <div class="form-field">
+                    <label for="page">Page</label>
+                    <input type="number" name="page" id="page" value="1" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="perPage">Items per page</label>
+                    <input type="number" name="perPage" id="perPage" value="5" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="property_type">Property Type</label>
+                    <select name="property_type" id="property_type" required>
+                        <option value="Apartment">Apartment</option>
+                        <option value="House">House</option>
+                        <option value="Condominium">Condominium</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

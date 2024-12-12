@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <h1>Search Results</h1>
+    <h2>Results for <%= property_type %> (Page <%= currentPage %> of <%= totalPages %>)</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Listing URL</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Review Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% airbnbs.forEach(airbnb=> { %>
+                <tr>
+                    <td><a href="<%= airbnb.listing_url %>">Link</a></td>
+                    <td>
+                        <%= airbnb.description %>
+                    </td>
+                    <td>
+                        <%= airbnb.price %>
+                    </td>
+                    <td>
+                        <%= airbnb.review_scores_rating %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+
+    <div>
+        <p>Total Results: <%= totalCount %>
+        </p>
+        <p>
+            <% if (currentPage> 1) { %>
+                <a
+                    href="/search?page=<%= currentPage - 1 %>&perPage=<%= perPage %>&property_type=<%= property_type %>">Previous</a>
+                <% } %>
+                    <% if (currentPage < totalPages) { %>
+                        <a
+                            href="/search?page=<%= currentPage + 1 %>&perPage=<%= perPage %>&property_type=<%= property_type %>">Next</a>
+                        <% } %>
+        </p>
+    </div>
+</body>
+
+</html>

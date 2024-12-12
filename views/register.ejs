@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Airbnb</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo">
+                <h1>Airbnb</h1>
+            </div>
+        </header>
+
+        <div class="form-container">
+            <h2>Create a new account</h2>
+            <form action="/register" method="POST" class="search-form">
+                <div class="form-field">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" required placeholder="Enter your username">
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required placeholder="Enter your password">
+                </div>
+
+                <div class="form-field">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" required
+                        placeholder="Confirm your password">
+                </div>
+
+                <div class="form-field">
+                    <select id="role" name="role">
+                        <option value="admin">Admin</option>
+                        <option value="customer">Customer</option>
+                      </select>
+                </div>
+
+               
+
+                <button type="submit" class="search-btn">Create Account</button>
+            </form>
+
+            <p>Already have an account? <a href="/login">Login here</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
